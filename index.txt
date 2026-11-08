@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NexAlgor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="NexAlgor builds lightweight, hand-coded websites that load instantly on mobile, and turns your business data into clear AI-assisted reports. Invoiced through Smart Belgium.">
+<meta property="og:title" content="NexAlgor — Intelligent & Digital Solutions">
+<meta property="og:description" content="Hand-coded websites that load instantly, and AI-assisted data reports for small businesses. Invoiced through Smart Belgium.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/earth.webp">
+<meta name="theme-color" content="#05070b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NexAlgor",
+  "slogan": "Intelligent & Digital Solutions",
+  "description": "Hand-coded high-performance websites and AI-assisted data analytics for businesses.",
+  "areaServed": "BE",
+  "email": "hello@nexalgor.com",
+  "knowsAbout": ["Web development", "Data analytics", "Artificial intelligence", "Local SEO"]
+}
+</script>
+<style>
+/* Layout: full-bleed night-orbit hero (Earth limb at the bottom, steel N centred), then a calm single column of sections on deep space black. Single dark look by design. */
+:root{
+  --space:#05070b;
+  --space-2:#0a0e16;
+  --steel:#c9d1dc;
+  --steel-dim:#8a94a3;
+  --ink:#e8ecf2;
+  --glow:#3b8cff;
+  --glow-soft:rgba(59,140,255,.18);
+  --line:rgba(201,209,220,.12);
+  --line-strong:rgba(201,209,220,.24);
+  --display:"Michroma","Eurostile","Square 721",ui-sans-serif,system-ui,sans-serif;
+  --body:"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  --wrap:1180px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--space);scroll-behavior:smooth}
+body{margin:0;background:var(--space);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--glow);outline-offset:3px;border-radius:4px}
+
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+.label{font-family:var(--display);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--steel-dim)}
+
+/* ---------- Header ---------- */
+.nav{position:absolute;inset:0 0 auto;z-index:5;padding-top:calc(env(safe-area-inset-top,0px) + 28px)}
+.nav .wrap{max-width:1560px;display:flex;align-items:center;gap:clamp(16px,3vw,40px)}
+.brand{display:flex;align-items:center;gap:16px;text-decoration:none}
+.brand img{width:34px;height:auto}
+.brand span{font-family:var(--display);font-size:15px;letter-spacing:.42em;color:var(--steel)}
+.nav .divider{width:1px;height:36px;background:var(--line-strong)}
+.links{display:flex;gap:clamp(24px,5vw,72px);list-style:none;margin:0 auto 0 clamp(8px,4vw,56px);padding:0}
+.links a{font-family:var(--display);font-size:12px;letter-spacing:.28em;text-decoration:none;color:var(--steel);transition:color .2s}
+.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:12px;font-family:var(--display);font-size:11px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;color:var(--ink);border:1px solid var(--glow);border-radius:999px;padding:14px 26px;background:rgba(59,140,255,.04);box-shadow:0 0 0 0 var(--glow-soft);transition:background .25s,box-shadow .25s;cursor:pointer}
+.btn:hover{background:rgba(59,140,255,.12);box-shadow:0 0 24px var(--glow-soft)}
+.btn svg{width:14px;height:14px}
+.nav .btn{margin-left:auto}
+.links + .btn{margin-left:0}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:min(100svh,980px);display:flex;flex-direction:column;justify-content:center;padding-top:150px;padding-bottom:clamp(170px,22vw,300px);
+  background:
+    radial-gradient(ellipse 60% 45% at 50% -5%,rgba(90,130,200,.16),transparent 70%),
+    var(--space)}
+.stars{position:absolute;inset:0;z-index:-2;opacity:.55;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 27% 62%,#cfd8ff 50%,transparent 51%),
+    radial-gradient(1px 1px at 41% 9%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 58% 34%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 73% 14%,#dfe6ff 50%,transparent 51%),
+    radial-gradient(1px 1px at 86% 48%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 93% 22%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 6% 44%,#fff 50%,transparent 51%),
+    radial-gradient(1.5px 1.5px at 66% 6%,#fff 50%,transparent 51%),
+    radial-gradient(1px 1px at 34% 30%,#bcd0ff 50%,transparent 51%)}
+.earth{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:max(1500px,135vw);max-width:none;z-index:-1;bottom:-9vw;pointer-events:none;
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%);mask-image:linear-gradient(to bottom,transparent 0%,#000 30%)}
+.earth img{width:100%;height:auto;max-width:none}
+.earth::after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(to bottom,transparent,var(--space))}
+.horizon-glow{position:absolute;left:50%;bottom:clamp(120px,18vw,260px);transform:translateX(-50%);width:70vw;height:120px;z-index:-1;border-radius:50%;background:radial-gradient(ellipse at center,rgba(59,140,255,.22),transparent 70%);filter:blur(20px);animation:breathe 7s ease-in-out infinite}
+
+.hero-core{display:flex;flex-direction:column;align-items:center;text-align:center;gap:0}
+.mark{width:clamp(150px,19vw,270px);height:auto;filter:drop-shadow(0 0 30px rgba(59,140,255,.25));animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
+h1.word{margin:clamp(14px,2vw,22px) 0 0;font-family:var(--display);font-weight:400;font-size:clamp(30px,6vw,76px);letter-spacing:.34em;margin-right:-.34em;line-height:1.1;
+  background:linear-gradient(180deg,#f4f7fb 0%,#c3cbd6 45%,#7d8794 60%,#d9dfe7 100%);-webkit-background-clip:text;background-clip:text;color:transparent;animation:fade 1.6s .2s ease both}
+.tagline{margin:clamp(12px,1.6vw,20px) 0 0;font-family:var(--display);font-size:clamp(10px,1.35vw,17px);letter-spacing:.42em;margin-right:-.42em;color:var(--steel-dim);text-transform:uppercase;animation:fade 1.6s .4s ease both}
+.hero-cta{margin-top:clamp(28px,4vw,44px);display:flex;gap:14px;flex-wrap:wrap;justify-content:center;animation:fade 1.6s .6s ease both}
+.btn.ghost{border-color:var(--line-strong);background:transparent}
+.btn.ghost:hover{border-color:var(--steel-dim);box-shadow:none;background:rgba(255,255,255,.04)}
+
+.badge{position:absolute;right:max(32px,calc(env(safe-area-inset-right,0px) + 32px));top:34%;text-align:left;text-shadow:0 1px 8px rgba(0,0,0,.8);display:flex;align-items:center;gap:16px;font-size:14px;line-height:1.35;color:var(--steel)}
+.flag{display:flex;width:26px;height:30px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.06)}
+.flag i{flex:1}
+.flag i:nth-child(1){background:#111}.flag i:nth-child(2){background:#f5d000}.flag i:nth-child(3){background:#e2232a}
+.badge .sep{width:1px;align-self:stretch;background:var(--line-strong)}
+.badge strong{display:flex;align-items:center;gap:8px;font-weight:500;font-size:16px;color:var(--ink)}
+.badge strong svg{width:18px;height:18px;color:var(--glow)}
+
+.scroll{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--steel);text-decoration:none}
+.scroll::before{content:"";width:1px;height:56px;background:linear-gradient(to bottom,transparent,var(--steel-dim))}
+.scroll svg{width:22px;height:12px;animation:nudge 2.6s ease-in-out infinite}
+
+@keyframes rise{from{opacity:.2;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+@keyframes fade{from{opacity:.15}to{opacity:1}}
+@keyframes breathe{0%,100%{opacity:.75}50%{opacity:1}}
+@keyframes nudge{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+
+/* ---------- Sections ---------- */
+section.block{padding-block:clamp(72px,10vw,128px);border-top:1px solid var(--line)}
+.head{display:grid;gap:14px;max-width:720px;margin-bottom:clamp(36px,5vw,56px)}
+.head h2{margin:0;font-family:var(--display);font-weight:400;font-size:clamp(22px,3vw,34px);letter-spacing:.06em;line-height:1.3;text-wrap:balance;color:#f2f5f9}
+.head p{margin:0;color:var(--steel-dim);font-size:17px;max-width:62ch}
+
+.services{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{position:relative;display:flex;flex-direction:column;gap:16px;padding:32px 28px 30px;border:1px solid var(--line);border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,.035),rgba(255,255,255,.01));min-width:0;transition:border-color .3s}
+.card:hover{border-color:rgba(59,140,255,.45)}
+.card .icon{width:44px;height:44px;display:grid;place-items:center;border-radius:10px;border:1px solid var(--line-strong);color:var(--glow)}
+.card .icon svg{width:22px;height:22px}
+.card h3{margin:0;font-family:var(--display);font-weight:400;font-size:16px;letter-spacing:.06em;line-height:1.45;color:#f2f5f9}
+.card p{margin:0;color:var(--steel-dim)}
+.card ul{margin:auto 0 0;padding:18px 0 0;list-style:none;border-top:1px solid var(--line);display:grid;gap:8px;font-size:14px;color:var(--steel)}
+.card li{display:flex;gap:10px}
+.card li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;border-radius:50%;background:var(--glow);box-shadow:0 0 8px var(--glow)}
+
+.spec{margin-top:20px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.spec div{padding:22px 24px;border-left:1px solid var(--line);display:grid;gap:4px}
+.spec div:first-child{border-left:0}
+.spec b{font-family:var(--display);font-weight:400;font-size:clamp(18px,2.2vw,24px);letter-spacing:.04em;color:#f2f5f9;font-variant-numeric:tabular-nums}
+.spec span{font-size:13px;color:var(--steel-dim)}
+
+.industries{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.industries div{background:var(--space);padding:26px 24px;display:grid;gap:8px;min-width:0}
+.industries h3{margin:0;font-size:17px;font-weight:600;color:var(--ink)}
+.industries p{margin:0;font-size:15px;color:var(--steel-dim)}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;gap:12px;padding-top:24px;border-top:1px solid var(--line-strong);min-width:0}
+.steps li::before{content:"0" counter(s);font-family:var(--display);font-size:12px;letter-spacing:.3em;color:var(--glow)}
+.steps h3{margin:0;font-size:19px;font-weight:600}
+.steps p{margin:0;color:var(--steel-dim)}
+
+.about{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,6vw,80px);align-items:start}
+.about p{margin:0 0 16px;color:var(--steel);font-size:17px;max-width:60ch}
+.smart{border:1px solid var(--line);border-radius:14px;padding:28px;display:grid;gap:14px;background:linear-gradient(180deg,rgba(59,140,255,.06),transparent)}
+.smart .row{display:flex;align-items:center;gap:14px}
+.smart h3{margin:0;font-family:var(--display);font-weight:400;font-size:15px;letter-spacing:.06em}
+.smart p{margin:0;color:var(--steel-dim);font-size:15px}
+.smart ul{margin:0;padding:0;list-style:none;display:grid;gap:8px;font-size:15px;color:var(--steel)}
+.smart li{display:flex;gap:10px;align-items:flex-start}
+.smart li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--glow)}
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px)}
+.contact .mail{font-family:var(--display);font-size:clamp(15px,1.8vw,19px);letter-spacing:.04em;color:var(--ink);user-select:all;word-break:break-all}
+.contact .side{display:grid;gap:18px;align-content:start}
+.contact .side p{margin:0;color:var(--steel-dim)}
+form{display:grid;gap:16px}
+.field{display:grid;gap:6px}
+.field label{font-size:13px;color:var(--steel-dim)}
+.field input,.field textarea,.field select{width:100%;font:inherit;color:var(--ink);background:var(--space-2);border:1px solid var(--line-strong);border-radius:10px;padding:13px 14px}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--glow);box-shadow:0 0 0 3px var(--glow-soft)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-note{margin:0;font-size:14px;color:var(--steel)}
+
+footer{border-top:1px solid var(--line);padding-block:36px calc(36px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:13px;color:var(--steel-dim)}
+footer .brand span{font-size:12px}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1100px){
+  .badge{position:static;margin:32px auto 0;justify-content:center}
+}
+@media (max-width:900px){
+  .links,.nav .divider{display:none}
+  .services,.steps{grid-template-columns:1fr}
+  .industries{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .spec{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .spec div:nth-child(3){border-left:0}
+  .spec div:nth-child(n+3){border-top:1px solid var(--line)}
+  .about,.contact{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .nav{padding-top:calc(env(safe-area-inset-top,0px) + 18px)}
+  .brand span{display:none}
+  .nav .btn{padding:11px 18px}
+  .hero{padding-top:120px}
+  .industries,.two{grid-template-columns:1fr}
+  h1.word{letter-spacing:.22em;margin-right:-.22em}
+  .tagline{letter-spacing:.24em;margin-right:-.24em}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="NexAlgor home">
+      <img src="assets/logo-n-small.webp" alt="" width="34" height="39">
+      <span>NEXALGOR</span>
+    </a>
+    <span class="divider" aria-hidden="true"></span>
+    <ul class="links">
+      <li><a href="#solutions">SOLUTIONS</a></li>
+      <li><a href="#industries">INDUSTRIES</a></li>
+      <li><a href="#about">ABOUT</a></li>
+    </ul>
+    <a class="btn" href="#contact">Get started
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="stars" aria-hidden="true"></div>
+    <div class="horizon-glow" aria-hidden="true"></div>
+    <picture class="earth" aria-hidden="true">
+      <source media="(max-width:700px)" srcset="assets/earth-sm.webp">
+      <img src="assets/earth.webp" alt="" width="2000" height="711" fetchpriority="high">
+    </picture>
+
+    <div class="wrap hero-core">
+      <img class="mark" src="assets/logo-n.webp" alt="NexAlgor logo" width="480" height="550" fetchpriority="high">
+      <h1 class="word" id="hero-title">NEXALGOR</h1>
+      <p class="tagline">Intelligent &amp; Digital Solutions</p>
+      <div class="badge">
+        <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="sep" aria-hidden="true"></span>
+        <span>Invoiced through<br><strong>Smart Belgium
+          <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="10" cy="10" r="8.3"/><path d="M6.3 10.2l2.5 2.5 5-5.2"/></svg></strong></span>
+      </div>
+    </div>
+
+    <a class="scroll" href="#solutions" aria-label="Scroll to solutions">
+      <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M1 1l10 10L21 1"/></svg>
+    </a>
+  </section>
+
+  <section class="block" id="solutions" aria-labelledby="sol-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Solutions</span>
+        <h2 id="sol-title">Fast websites, clear numbers, clean invoices.</h2>
+        <p>Three things a growing business needs from its digital partner. We do all three ourselves, without templates or page builders.</p>
+      </div>
+
+      <div class="services">
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+          <h3>High-Performance Websites</h3>
+          <p>Custom sites written in clean HTML and CSS. No heavy platforms, no plugin stack. Pages open instantly on a phone, so more visitors become customers and you rank better on local Google Maps.</p>
+          <ul>
+            <li>Hand-coded, mobile first</li>
+            <li>Local SEO and Google Business Profile setup</li>
+            <li>You own every file</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 20h18M6 16V10M11 16V5M16 16v-7M21 16v-3"/></svg></div>
+          <h3>AI &amp; Data Analytics</h3>
+          <p>We use current AI models to analyse your metrics, sales and day-to-day needs. Send us your raw data, such as Excel exports, and get back a strategic report that shows where to cut costs and where to grow profit.</p>
+          <ul>
+            <li>Works with Excel, CSV and POS exports</li>
+            <li>Plain-language reports with charts</li>
+            <li>Concrete actions, not dashboards to decode</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.3 8-8 9-4.7-1-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div>
+          <h3>Legal Compliance in Belgium</h3>
+          <p>All financial and legal paperwork runs transparently through Smart, Belgium's cooperative for independent professionals. You receive a valid company invoice and can book the cost as a normal business expense.</p>
+          <ul>
+            <li>Official invoices with VAT</li>
+            <li>Clear contract for every project</li>
+            <li>Deductible as a business expense</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="spec" aria-label="Performance targets for every site we build">
+        <div><b>&lt; 150 KB</b><span>Target page weight</span></div>
+        <div><b>&lt; 1.5 s</b><span>Target load on 4G</span></div>
+        <div><b>95+</b><span>Lighthouse score goal</span></div>
+        <div><b>0</b><span>Plugins to update</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="industries" aria-labelledby="ind-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">Industries</span>
+        <h2 id="ind-title">Built for businesses that live on local search.</h2>
+        <p>If your customers find you on their phone, a slow site costs you sales every day.</p>
+      </div>
+      <div class="industries">
+        <div><h3>Restaurants &amp; cafés</h3><p>Menus that open instantly, booking links, and a strong Maps listing.</p></div>
+        <div><h3>Retail &amp; shops</h3><p>Product pages and sales analysis from your till or webshop exports.</p></div>
+        <div><h3>Trades &amp; home services</h3><p>Pages that rank for "near me" searches and turn calls into jobs.</p></div>
+        <div><h3>Professional services</h3><p>Clean, credible sites for accountants, clinics, studios and consultants.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="head">
+        <span class="label">How we work</span>
+        <h2 id="how-title">From first call to live site.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Discovery call</h3><p>A free 30-minute call about your business, your customers and what you need. You get a fixed quote afterwards.</p></li>
+        <li><h3>Build &amp; analyse</h3><p>We design and code your site, or analyse your data. You see progress and give feedback along the way.</p></li>
+        <li><h3>Launch &amp; report</h3><p>Your site goes live, or your report lands in your inbox. Invoiced through Smart, ready for your books.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="about" aria-labelledby="about-title">
+    <div class="wrap about">
+      <div>
+        <div class="head" style="margin-bottom:24px">
+          <span class="label">About</span>
+          <h2 id="about-title">Engineering first, then design.</h2>
+        </div>
+        <p>NexAlgor is a small, independent studio for websites and data. We write every line of code ourselves, because lightweight code is what makes a site fast, secure and cheap to keep running.</p>
+        <p>On the data side, we combine modern AI tools with careful human review, so your report says something you can act on.</p>
+      </div>
+      <aside class="smart" aria-label="Invoicing through Smart Belgium">
+        <div class="row">
+          <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
+          <h3>Invoicing through Smart Belgium</h3>
+        </div>
+        <p>Every project is contracted and invoiced through Smart, the Belgian cooperative that handles contracts, invoicing and social security for independent professionals.</p>
+        <ul>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Valid company invoices</li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Transparent, documented payments</li>
+          <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Book the cost as a business expense</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="block" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact">
+      <div class="side">
+        <div class="head" style="margin-bottom:0">
+          <span class="label">Get started</span>
+          <h2 id="contact-title">Tell us about your project.</h2>
+        </div>
+        <p>We reply within one working day with next steps and a time for a free call.</p>
+        <span class="mail">hello@nexalgor.com</span>
+      </div>
+      <form id="contact-form" novalidate>
+        <div class="two">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="field">
+          <label for="f-topic">I'm interested in</label>
+          <select id="f-topic" name="topic">
+            <option>A new website</option>
+            <option>Data analysis / AI report</option>
+            <option>Both</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-msg">Message</label><textarea id="f-msg" name="message" placeholder="A few lines about your business and what you need."></textarea></div>
+        <div><button class="btn" type="submit">Send message
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button></div>
+        <p class="form-note" id="form-note" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="brand" href="#top"><img src="assets/logo-n-small.webp" alt="" width="34" height="39"><span>NEXALGOR</span></a>
+    <span>Intelligent &amp; Digital Solutions · Belgium</span>
+    <span>© 2026 NexAlgor · Invoiced through Smart Belgium</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var note = document.getElementById('form-note');
+  var name = document.getElementById('f-name').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  if (!name || !/^\S+@\S+\.\S+$/.test(email)) {
+    note.textContent = 'Please add your name and a valid email address.';
+  } else {
+    note.textContent = 'The form is not connected yet. Please email hello@nexalgor.com for now.';
+  }
+  note.hidden = false;
+});
+</script>
+
+</html>
