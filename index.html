@@ -7,7 +7,7 @@
 <meta property="og:title" content="NexAlgor — Intelligent & Digital Solutions">
 <meta property="og:description" content="Hand-coded websites that load instantly, and AI-assisted data reports for small businesses. Invoiced through Smart Belgium.">
 <meta property="og:type" content="website">
-<meta property="og:image" content="assets/earth-sunrise.webp">
+<meta property="og:image" content="assets/earth-sunrise-hd.webp">
 <meta name="theme-color" content="#05070b">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,11 +86,11 @@ img{max-width:100%;display:block}
     radial-gradient(1px 1px at 6% 44%,#fff 50%,transparent 51%),
     radial-gradient(1.5px 1.5px at 66% 6%,#fff 50%,transparent 51%),
     radial-gradient(1px 1px at 34% 30%,#bcd0ff 50%,transparent 51%)}
-.earth{position:absolute;left:50%;top:calc(var(--hz) + 4% - var(--ew) * .4345);transform:translateX(-50%);width:var(--ew);max-width:none;z-index:-1;pointer-events:none;
+.earth{position:absolute;left:50%;top:calc(var(--hz) + 4% - var(--ew) * .3234);transform:translateX(-50%);width:var(--ew);max-width:none;z-index:-1;pointer-events:none;
   -webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 30%);mask-image:linear-gradient(to bottom,transparent 0%,#000 30%)}
 .earth img{width:100%;height:auto;max-width:none}
 .earth::after{content:"";position:absolute;inset:auto 0 0;height:30%;background:linear-gradient(to bottom,transparent,var(--space))}
-.horizon-glow{position:absolute;left:50%;top:calc(var(--hz) - 70px);transform:translateX(-50%);width:70vw;height:120px;z-index:-1;border-radius:50%;background:radial-gradient(ellipse at center,rgba(59,140,255,.22),transparent 70%);filter:blur(20px);animation:breathe 7s ease-in-out infinite}
+.horizon-glow{display:none;position:absolute;left:50%;top:calc(var(--hz) - 70px);transform:translateX(-50%);width:70vw;height:120px;z-index:-1;border-radius:50%;background:radial-gradient(ellipse at center,rgba(59,140,255,.22),transparent 70%);filter:blur(20px);animation:breathe 7s ease-in-out infinite}
 
 .hero-core{position:absolute;inset:0 0 calc(100% - var(--hz)) 0;max-width:none;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;padding-bottom:clamp(18px,5svh,56px);text-align:center}
 .mark{height:clamp(110px,27svh,290px);width:auto;filter:drop-shadow(0 0 30px rgba(59,140,255,.25));animation:rise 1.4s cubic-bezier(.2,.7,.2,1) both}
@@ -233,7 +233,7 @@ footer .brand span{font-size:12px}
     <div class="stars" aria-hidden="true"></div>
     <div class="horizon-glow" aria-hidden="true"></div>
     <div class="earth" aria-hidden="true">
-      <img src="assets/earth-sunrise.webp" alt="" width="3200" height="2134" fetchpriority="high">
+      <img src="assets/earth-sunrise-hd.webp" alt="" width="3600" height="1721" fetchpriority="high">
     </div>
 
     <div class="wrap hero-core">
