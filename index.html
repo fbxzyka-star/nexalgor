@@ -3,7 +3,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>NexAlgor</title>
-<meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="NexAlgor builds lightweight, hand-coded websites that load instantly on mobile, and turns your business data into clear AI-assisted reports. Invoiced through Smart Belgium.">
 <meta property="og:title" content="NexAlgor — Intelligent & Digital Solutions">
 <meta property="og:description" content="Hand-coded websites that load instantly, and AI-assisted data reports for small businesses. Invoiced through Smart Belgium.">
@@ -193,6 +192,9 @@ footer .brand span{font-size:12px}
   .spec div:nth-child(n+3){border-top:1px solid var(--line)}
   .about,.contact{grid-template-columns:1fr}
 }
+@media (max-width:700px){
+  .earth{width:900px;bottom:0}
+}
 @media (max-width:520px){
   .nav{padding-top:calc(env(safe-area-inset-top,0px) + 18px)}
   .brand span{display:none}
@@ -229,10 +231,9 @@ footer .brand span{font-size:12px}
   <section class="hero" aria-labelledby="hero-title">
     <div class="stars" aria-hidden="true"></div>
     <div class="horizon-glow" aria-hidden="true"></div>
-    <picture class="earth" aria-hidden="true">
-      <source media="(max-width:700px)" srcset="assets/earth-sm.webp">
-      <img src="assets/earth.webp" alt="" width="2000" height="711" fetchpriority="high">
-    </picture>
+    <div class="earth" aria-hidden="true">
+      <img src="assets/earth.webp" alt="" width="2600" height="924" fetchpriority="high">
+    </div>
 
     <div class="wrap hero-core">
       <img class="mark" src="assets/logo-n.webp" alt="NexAlgor logo" width="480" height="550" fetchpriority="high">
@@ -295,7 +296,7 @@ footer .brand span{font-size:12px}
       </div>
 
       <div class="spec" aria-label="Performance targets for every site we build">
-        <div><b>&lt; 150 KB</b><span>Target page weight</span></div>
+        <div><b>&lt; 250 KB</b><span>Target page weight</span></div>
         <div><b>&lt; 1.5 s</b><span>Target load on 4G</span></div>
         <div><b>95+</b><span>Lighthouse score goal</span></div>
         <div><b>0</b><span>Plugins to update</span></div>
