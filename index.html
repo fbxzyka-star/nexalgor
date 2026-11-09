@@ -138,6 +138,9 @@ section.block{padding-block:clamp(72px,10vw,128px);border-top:1px solid var(--li
 .card h3{margin:0;font-family:var(--display);font-weight:400;font-size:16px;letter-spacing:.06em;line-height:1.45;color:#f2f5f9}
 .card p{margin:0;color:var(--steel-dim)}
 .card ul{margin:auto 0 0;padding:18px 0 0;list-style:none;border-top:1px solid var(--line);display:grid;gap:8px;font-size:14px;color:var(--steel)}
+.card-link{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;margin-top:6px;padding:11px 20px;border:1px solid var(--glow);border-radius:999px;font-family:var(--display);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;text-decoration:none;color:var(--ink);transition:background .25s,box-shadow .25s}
+.card-link:hover{background:rgba(59,140,255,.12);box-shadow:0 0 20px var(--glow-soft)}
+.card-link svg{width:13px;height:13px}
 .card li{display:flex;gap:10px}
 .card li::before{content:"";flex:none;width:6px;height:6px;margin-top:8px;border-radius:50%;background:var(--glow);box-shadow:0 0 8px var(--glow)}
 
@@ -363,6 +366,8 @@ footer .brand span{font-size:12px}
             <li>Local SEO and Google Business Profile setup</li>
             <li>You own every file</li>
           </ul>
+          <a class="card-link" href="/web/">Build your website
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
         </article>
 
         <article class="card">

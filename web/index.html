@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NexAlgor Web</title>
+<meta name="description" content="NexAlgor builds fast, hand-coded websites for businesses: mobile first, ready for Google and local Maps, invoiced through Smart Belgium.">
+<link rel="canonical" href="https://nexalgor.com/web/">
+<meta property="og:title" content="NexAlgor Web — Modern Websites, Real Business Growth">
+<meta property="og:description" content="Fast, professional, hand-coded websites built for your business.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://nexalgor.com/web/">
+<meta property="og:image" content="https://nexalgor.com/web/office-hd.webp">
+<meta name="theme-color" content="#f3f6fa">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "NexAlgor",
+  "url": "https://nexalgor.com/web/",
+  "description": "Hand-coded, high-performance websites for businesses.",
+  "areaServed": "BE",
+  "email": "contact@nexalgor.com"
+}
+</script>
+<style>
+/* Layout: airy daylight office hero with copy on the left and a four-point strip along the bottom, then calm white sections. Light by design: this is the websites side of NexAlgor. */
+:root{
+  --paper:#f3f6fa;
+  --white:#ffffff;
+  --ink:#0b1424;
+  --ink-2:#3a4659;
+  --muted:#6a7588;
+  --blue:#1d5fe0;
+  --blue-2:#3b8cff;
+  --navy:#081a3d;
+  --line:rgba(11,20,36,.10);
+  --line-strong:rgba(11,20,36,.18);
+  --display:"Michroma","Eurostile",ui-sans-serif,system-ui,sans-serif;
+  --body:"Hanken Grotesk",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter-l:max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r:max(16px, env(safe-area-inset-right, 0px));
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{background:var(--paper);scroll-behavior:smooth;scroll-padding-top:84px}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
+a{color:inherit}
+img{max-width:100%;display:block}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1240px;margin-inline:auto;padding-left:var(--gutter-l);padding-right:var(--gutter-r)}
+
+/* ---------- Header ---------- */
+.nav{position:fixed;inset:0 0 auto;z-index:50;padding-top:calc(env(safe-area-inset-top,0px) + 22px);padding-bottom:20px;border-bottom:1px solid var(--line);transition:background .3s,padding .3s}
+.nav.scrolled{background:rgba(243,246,250,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);padding-top:calc(env(safe-area-inset-top,0px) + 14px);padding-bottom:14px}
+.nav .wrap{max-width:1560px;display:flex;align-items:center;gap:24px}
+.brand{display:flex;align-items:center;gap:18px;font-family:var(--display);font-size:17px;letter-spacing:.42em;text-decoration:none;color:var(--ink)}
+.brand img{width:auto;height:48px}
+.nav.scrolled .brand img{height:40px}
+.brand img{transition:height .3s}
+.links{display:flex;gap:clamp(24px,4vw,64px);list-style:none;margin:0 auto;padding:0}
+.links a{position:relative;display:block;padding-block:8px;font-size:16px;font-weight:500;text-decoration:none;color:var(--ink-2);transition:color .2s}
+.links a:hover{color:var(--ink)}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;border-radius:2px;background:var(--blue);transform:scaleX(0);transition:transform .25s}
+.links a:hover::after,.links a.active::after{transform:scaleX(1)}
+.links a.active{color:var(--ink)}
+.btn-line{white-space:nowrap;display:inline-flex;align-items:center;gap:10px;padding:12px 26px;border-radius:999px;border:1.5px solid var(--blue-2);font-weight:500;text-decoration:none;color:var(--ink);background:rgba(255,255,255,.55);transition:background .2s,box-shadow .2s}
+.btn-line:hover{background:#fff;box-shadow:0 6px 20px rgba(29,95,224,.15)}
+.btn-line svg,.btn-solid svg{width:16px;height:16px}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;isolation:isolate;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-top:120px}
+.hero-bg{position:absolute;inset:0;z-index:-1}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:55% 60%;max-width:none}
+.hero-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(243,246,250,.86) 0%,rgba(243,246,250,.62) 34%,rgba(243,246,250,.12) 62%,rgba(243,246,250,0) 100%),
+  linear-gradient(180deg,rgba(243,246,250,.55) 0%,rgba(243,246,250,0) 22%,rgba(243,246,250,0) 70%,rgba(243,246,250,.6) 100%)}
+.hero .wrap.hero-copy{max-width:1560px;margin-inline:0;padding-left:max(16px,env(safe-area-inset-left,0px),4.8vw)}
+.hero-copy{display:grid;gap:clamp(16px,2.6vh,26px);justify-items:start;padding-bottom:clamp(120px,20vh,190px)}
+.eyebrow{display:flex;align-items:center;gap:18px;margin:0;font-size:13px;font-weight:500;letter-spacing:.24em;text-transform:uppercase;color:var(--ink-2)}
+.eyebrow::before{content:"";width:48px;height:2px;border-radius:2px;background:var(--blue)}
+h1{margin:0;font-weight:400;font-size:clamp(40px,min(5.6vw,9.4vh),92px);line-height:1.04;letter-spacing:-.02em;color:var(--ink)}
+h1 strong{display:block;font-weight:600;background:linear-gradient(90deg,#123a9c 0%,var(--blue) 45%,var(--blue-2) 100%);-webkit-background-clip:text;background-clip:text;color:transparent;padding-bottom:.06em}
+.lead{margin:0;font-size:clamp(18px,1.7vw,26px);color:var(--ink-2)}
+.btn-solid{display:inline-flex;align-items:center;gap:12px;margin-top:6px;padding:18px 34px;border-radius:999px;font-size:18px;font-weight:500;text-decoration:none;color:#fff;background:radial-gradient(120% 140% at 30% 0%,#173d8f 0%,var(--navy) 60%);border:1.5px solid var(--blue-2);box-shadow:0 0 0 4px rgba(59,140,255,.12),0 10px 30px rgba(29,95,224,.35),0 0 28px rgba(59,140,255,.35);transition:transform .2s,box-shadow .2s}
+.btn-solid:hover{transform:translateY(-1px);box-shadow:0 0 0 5px rgba(59,140,255,.16),0 14px 36px rgba(29,95,224,.42),0 0 34px rgba(59,140,255,.45)}
+
+.perks{position:absolute;left:0;right:0;bottom:clamp(24px,5vh,56px)}
+.perks ul{list-style:none;margin:0 auto;padding:0;display:flex;justify-content:center;flex-wrap:wrap;row-gap:12px}
+.perks li{display:flex;align-items:center;gap:14px;padding-inline:clamp(20px,3.4vw,58px);font-size:17px;font-weight:500;color:var(--ink)}
+.perks li + li{border-left:1px solid var(--line-strong)}
+.perks svg{width:30px;height:30px;color:var(--ink);flex:none}
+
+/* ---------- Sections ---------- */
+section.block{padding-block:clamp(72px,10vw,120px);background:var(--white);border-top:1px solid var(--line)}
+section.block.alt{background:var(--paper)}
+.head{display:grid;gap:14px;max-width:720px;margin-bottom:clamp(36px,5vw,56px)}
+.head .eyebrow{font-size:12px}
+.head h2{margin:0;font-weight:500;font-size:clamp(28px,3.4vw,44px);line-height:1.15;letter-spacing:-.01em;text-wrap:balance}
+.head p{margin:0;font-size:18px;color:var(--muted);max-width:60ch}
+
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.feature{display:grid;gap:12px;align-content:start;padding:28px;border:1px solid var(--line);border-radius:16px;background:var(--paper);min-width:0}
+.block.alt .feature{background:var(--white)}
+.feature .ic{width:46px;height:46px;display:grid;place-items:center;border-radius:12px;background:rgba(29,95,224,.08);color:var(--blue)}
+.feature .ic svg{width:24px;height:24px}
+.feature h3{margin:4px 0 0;font-size:20px;font-weight:600}
+.feature p{margin:0;color:var(--muted)}
+
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.plan{display:flex;flex-direction:column;gap:16px;padding:32px 28px;border:1px solid var(--line);border-radius:18px;background:var(--white);min-width:0}
+.plan.featured{border:1.5px solid var(--blue-2);box-shadow:0 18px 50px rgba(29,95,224,.12)}
+.plan .tag{align-self:flex-start;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:rgba(29,95,224,.08);padding:6px 12px;border-radius:999px}
+.plan h3{margin:0;font-size:24px;font-weight:600}
+.plan .for{margin:0;color:var(--muted)}
+.plan ul{list-style:none;margin:0;padding:18px 0 0;border-top:1px solid var(--line);display:grid;gap:10px}
+.plan li{display:flex;gap:10px;align-items:flex-start}
+.plan li svg{flex:none;width:18px;height:18px;margin-top:3px;color:var(--blue)}
+.plan .price{margin-top:auto;padding-top:8px;font-size:15px;color:var(--ink-2)}
+.plan .price strong{font-size:18px;color:var(--ink)}
+
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px;counter-reset:s}
+.steps li{counter-increment:s;display:grid;gap:10px;align-content:start;padding-top:22px;border-top:2px solid var(--line-strong);min-width:0}
+.steps li::before{content:"0" counter(s);font-size:14px;font-weight:600;letter-spacing:.2em;color:var(--blue)}
+.steps h3{margin:0;font-size:19px;font-weight:600}
+.steps p{margin:0;color:var(--muted)}
+
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:clamp(32px,6vw,80px)}
+.contact .side{display:grid;gap:18px;align-content:start}
+.contact .side p{margin:0;color:var(--muted);font-size:17px}
+.mail{font-size:clamp(18px,2vw,22px);font-weight:600;color:var(--ink);user-select:all;word-break:break-all}
+.smart{display:flex;align-items:center;gap:14px;font-size:15px;color:var(--ink-2)}
+.flag{display:flex;width:22px;height:26px;border-radius:2px;overflow:hidden;box-shadow:0 0 0 1px var(--line)}
+.flag i{flex:1}
+.flag i:nth-child(1){background:#111}.flag i:nth-child(2){background:#f5d000}.flag i:nth-child(3){background:#e2232a}
+form{display:grid;gap:16px;padding:clamp(22px,3vw,32px);border:1px solid var(--line);border-radius:18px;background:var(--paper)}
+.field{display:grid;gap:6px}
+.field label{font-size:14px;font-weight:500;color:var(--ink-2)}
+.field input,.field textarea,.field select{width:100%;font:inherit;color:var(--ink);background:var(--white);border:1px solid var(--line-strong);border-radius:10px;padding:13px 14px}
+.field textarea{min-height:130px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(29,95,224,.15)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn-solid{font-size:16px;padding:15px 28px;justify-self:start}
+.form-note{margin:0;font-size:15px;color:var(--ink-2)}
+
+footer{background:var(--white);border-top:1px solid var(--line);padding-block:32px calc(32px + env(safe-area-inset-bottom,0px))}
+footer .wrap{display:flex;flex-wrap:wrap;gap:14px 32px;align-items:center;justify-content:space-between;font-size:14px;color:var(--muted)}
+footer .brand{font-size:13px}
+footer a.also{text-decoration:none;color:var(--muted)}
+footer a.also:hover{color:var(--blue)}
+
+.reveal{animation:up .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-copy > :nth-child(2){animation-delay:.08s}
+.hero-copy > :nth-child(3){animation-delay:.16s}
+.hero-copy > :nth-child(4){animation-delay:.24s}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+/* ---------- Responsive ---------- */
+@media (max-width:1000px){
+  .perks li{padding-inline:18px;font-size:15px}
+  .perks svg{width:24px;height:24px}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:900px){
+  .links{display:none}
+  .nav .btn-line{margin-left:auto}
+  .grid3,.plans,.contact{grid-template-columns:1fr}
+  .hero{justify-content:flex-start;padding-top:clamp(120px,18vh,170px)}
+  .hero-bg{background:var(--paper)}
+  .hero-bg img{position:absolute;left:50%;bottom:0;width:205vw;height:auto;transform:translateX(-41%);-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 32%);mask-image:linear-gradient(180deg,transparent 0%,#000 32%)}
+  .hero-bg::after{background:linear-gradient(180deg,rgba(243,246,250,.5) 0%,rgba(243,246,250,.35) 50%,rgba(243,246,250,.05) 72%,rgba(243,246,250,.55) 100%)}
+  .hero-copy{padding-bottom:200px}
+  .perks ul{display:grid;grid-template-columns:1fr 1fr;row-gap:16px;padding-inline:var(--gutter-l) var(--gutter-r)}
+  .perks li,.perks li + li{border-left:0;padding-inline:8px}
+}
+@media (max-width:520px){
+  .brand span{display:none}
+  .brand img{height:40px}
+  .nav .btn-line{padding:10px 18px;font-size:15px}
+  .steps,.two{grid-template-columns:1fr}
+  .eyebrow{letter-spacing:.18em}
+  .perks li{font-size:14px;gap:10px}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="NexAlgor Web, back to top"><img src="logo-n.webp" alt="" width="108" height="120"><span>NEXALGOR</span></a>
+    <ul class="links">
+      <li><a class="active" href="#top">Web Solutions</a></li>
+      <li><a href="#included">What's Included</a></li>
+      <li><a href="#packages">Packages</a></li>
+      <li><a href="#process">Process</a></li>
+    </ul>
+    <a class="btn-line" href="#contact">Get Started
+      <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-bg" aria-hidden="true"><img src="office-hd.webp" alt="" width="2800" height="1867" fetchpriority="high"></div>
+    <div class="wrap hero-copy">
+      <p class="eyebrow reveal">Website solutions</p>
+      <h1 id="hero-title" class="reveal">Modern Websites.<strong>Real Business Growth.</strong></h1>
+      <p class="lead reveal">Fast. Professional. Built for your business.</p>
+      <a class="btn-solid reveal" href="#contact">Build Your Website
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+    <div class="perks" aria-label="Every website includes">
+      <ul>
+        <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M18 3L7 18h8l-2 11 11-15h-8l2-11z"/></svg>Ultra-Fast Performance</li>
+        <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="9" y="3" width="14" height="26" rx="2.5"/><path d="M14 25h4"/></svg>Responsive Design</li>
+        <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 27V21M11 27V17M16 27V13M21 27V9M5 16l7-6 5 4 10-9M22 5h5v5"/></svg>SEO Optimized</li>
+        <li><svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M16 3l11 4v8c0 6.4-4.6 11.4-11 13-6.4-1.6-11-6.6-11-13V7l11-4z"/><path d="M11 16l3.5 3.5L21 13"/></svg>Secure &amp; Reliable</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="block" id="included" aria-labelledby="inc-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">What's included</p>
+        <h2 id="inc-title">Everything your business needs to be found and chosen online.</h2>
+        <p>Every site is written by hand in clean HTML and CSS. No page builders, no plugins to update, nothing slowing your pages down.</p>
+      </div>
+      <div class="grid3">
+        <article class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 21h8M12 18v3M7 9h6M7 12h10"/></svg></div>
+          <h3>Custom design</h3>
+          <p>A look made for your brand, not a template shared with thousands of other businesses.</p>
+        </article>
+        <article class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M11 18h2"/></svg></div>
+          <h3>Mobile first</h3>
+          <p>Most of your visitors arrive on a phone. Your site opens instantly there and is easy to use with one thumb.</p>
+        </article>
+        <article class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+          <h3>Google &amp; Maps ready</h3>
+          <p>Clean structure, fast pages and Google Business Profile setup, so local customers find you on Search and Maps.</p>
+        </article>
+        <article class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></div>
+          <h3>Contact that works</h3>
+          <p>Contact forms, click-to-call and booking links that send enquiries straight to your inbox.</p>
+        </article>
+        <article class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg></div>
+          <h3>Domain &amp; hosting setup</h3>
+          <p>We connect your domain, set up secure HTTPS hosting and get everything live for you.</p>
+        </article>
+        <article class="feature">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M9 14l2 2 4-4"/></svg></div>
+          <h3>You own every file</h3>
+          <p>No lock-in. The code and content are yours, and any developer can work with them.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block alt" id="packages" aria-labelledby="pkg-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Packages</p>
+        <h2 id="pkg-title">Pick a starting point. We shape it around you.</h2>
+        <p>Every project gets a fixed quote after a free call, so you know the full cost before we start.</p>
+      </div>
+      <div class="plans">
+        <article class="plan">
+          <h3>Starter</h3>
+          <p class="for">A one-page site for a new or small business that needs to be online quickly.</p>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>One page with all key sections</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Contact form and click-to-call</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Google Business Profile setup</li>
+          </ul>
+          <p class="price"><strong>Price on request</strong></p>
+        </article>
+        <article class="plan featured">
+          <span class="tag">Most chosen</span>
+          <h3>Business</h3>
+          <p class="for">A multi-page site for an established business that wants more customers from search.</p>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Up to 5 pages</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Local SEO for your area</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Contact forms and booking links</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Google Business Profile setup</li>
+          </ul>
+          <p class="price"><strong>Price on request</strong></p>
+        </article>
+        <article class="plan">
+          <h3>Custom</h3>
+          <p class="for">For larger sites or special features, such as multiple languages or a product catalogue.</p>
+          <ul>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Scope built around your needs</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Multilingual pages</li>
+            <li><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 10.5l3 3 7-7.5"/></svg>Custom features and integrations</li>
+          </ul>
+          <p class="price"><strong>Price on request</strong></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="process" aria-labelledby="proc-title">
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">Process</p>
+        <h2 id="proc-title">From first call to live website.</h2>
+      </div>
+      <ol class="steps">
+        <li><h3>Free call</h3><p>We talk about your business, your customers and what the site needs to do. You get a fixed quote.</p></li>
+        <li><h3>Design</h3><p>You see the design first and give feedback before any page is built.</p></li>
+        <li><h3>Build &amp; launch</h3><p>We code the site, connect your domain and put it live, tested on phones and computers.</p></li>
+        <li><h3>Support</h3><p>Need a change later? We're one email away.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block alt" id="contact" aria-labelledby="contact-title">
+    <div class="wrap contact">
+      <div class="side">
+        <div class="head" style="margin-bottom:0">
+          <p class="eyebrow">Get started</p>
+          <h2 id="contact-title">Tell us about your business.</h2>
+        </div>
+        <p>We reply within one working day with next steps and a time for a free call.</p>
+        <span class="mail">contact@nexalgor.com</span>
+        <div class="smart"><span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>Invoiced through Smart Belgium</div>
+      </div>
+      <form id="web-form" novalidate>
+        <div class="two">
+          <div class="field"><label for="w-name">Name</label><input id="w-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="w-email">Email</label><input id="w-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="two">
+          <div class="field"><label for="w-company">Business name</label><input id="w-company" name="company" autocomplete="organization"></div>
+          <div class="field">
+            <label for="w-plan">Package</label>
+            <select id="w-plan" name="plan">
+              <option>Not sure yet</option>
+              <option>Starter</option>
+              <option>Business</option>
+              <option>Custom</option>
+            </select>
+          </div>
+        </div>
+        <div class="field"><label for="w-msg">Message</label><textarea id="w-msg" name="message" placeholder="What does your business do, and do you already have a website?"></textarea></div>
+        <button class="btn-solid" type="submit">Send message
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg></button>
+        <p class="form-note" id="w-note" role="status" hidden></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="brand">NEXALGOR</span>
+    <span>© 2026 NexAlgor · Invoiced through Smart Belgium</span>
+    <a class="also" href="/">Also by NexAlgor: Market intelligence →</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var nav = document.querySelector('.nav');
+  function onScroll() { nav.classList.toggle('scrolled', window.scrollY > 30); }
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  document.getElementById('web-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var note = document.getElementById('w-note');
+    var name = document.getElementById('w-name').value.trim();
+    var email = document.getElementById('w-email').value.trim();
+    note.textContent = (!name || !/^\S+@\S+\.\S+$/.test(email))
+      ? 'Please add your name and a valid email address.'
+      : 'The form is not connected yet. Please email contact@nexalgor.com for now.';
+    note.hidden = false;
+  });
+})();
+</script>
+
+</html>
