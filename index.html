@@ -16,7 +16,7 @@
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=Hanken+Grotesk:wght@300;400;500;600;700&display=swap">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -49,7 +49,7 @@
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{background:var(--space);scroll-behavior:smooth}
+html{background:var(--space);scroll-behavior:smooth;scroll-padding-top:88px}
 body{margin:0;background:var(--space);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 a{color:inherit}
 img{max-width:100%;display:block}
@@ -59,7 +59,9 @@ img{max-width:100%;display:block}
 .label{font-family:var(--display);font-size:11px;letter-spacing:.32em;text-transform:uppercase;color:var(--steel-dim)}
 
 /* ---------- Header ---------- */
-.nav{position:absolute;inset:0 0 auto;z-index:5;padding-top:calc(env(safe-area-inset-top,0px) + 28px)}
+.nav{position:fixed;inset:0 0 auto;z-index:50;padding-top:calc(env(safe-area-inset-top,0px) + 28px);padding-bottom:0;border-bottom:1px solid transparent;transition:background .35s,padding .35s,border-color .35s}
+.nav.scrolled{background:rgba(5,7,11,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom-color:var(--line);padding-top:calc(env(safe-area-inset-top,0px) + 14px);padding-bottom:14px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--space)}
 .nav .wrap{max-width:1560px;display:flex;align-items:center;gap:clamp(16px,3vw,40px)}
 .brand{display:flex;align-items:center;gap:16px;text-decoration:none}
 .brand img{width:34px;height:auto}
@@ -113,7 +115,7 @@ h1.word{margin:clamp(8px,2.2svh,24px) 0 0;font-family:var(--display);font-weight
 .badge strong{display:flex;align-items:center;gap:8px;font-weight:500;font-size:16px;color:var(--ink)}
 .badge strong svg{width:18px;height:18px;color:var(--glow)}
 
-.scroll{position:absolute;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--steel);text-decoration:none}
+.scroll{position:absolute;z-index:2;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--steel);text-decoration:none}
 .scroll::before{content:"";width:1px;height:56px;background:linear-gradient(to bottom,transparent,var(--steel-dim))}
 .scroll svg{width:22px;height:12px;animation:nudge 2.6s ease-in-out infinite}
 
@@ -210,6 +212,57 @@ footer .brand span{font-size:12px}
   h1.word{letter-spacing:.22em;margin-right:-.22em}
   .tagline{letter-spacing:.24em;margin-right:-.24em}
 }
+/* ---------- Market intelligence ---------- */
+.intel{position:relative;isolation:isolate;overflow:hidden;min-height:100vh;min-height:100svh;display:flex;align-items:center;padding-block:clamp(96px,13vh,130px) clamp(28px,5vh,56px)}
+.intel-bg{position:absolute;inset:0 0 0 30%;z-index:-1;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 38%);mask-image:linear-gradient(90deg,transparent 0%,#000 38%)}
+.intel-bg img{width:100%;height:100%;object-fit:cover;object-position:18% 45%;max-width:none}
+.intel-bg::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(5,7,11,.55) 0%,rgba(5,7,11,.15) 55%,rgba(5,7,11,.3) 100%),
+  linear-gradient(180deg,var(--space) 0%,rgba(5,7,11,0) 18%,rgba(5,7,11,0) 58%,var(--space) 100%)}
+.intel-inner{display:grid;gap:clamp(28px,5.5vh,64px);width:100%}
+.intel-copy{max-width:920px;display:grid;gap:clamp(14px,2.3vh,22px);justify-items:start}
+.eyebrow{display:flex;align-items:center;gap:18px;margin:0;font-family:var(--display);font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--steel)}
+.eyebrow::before{content:"";width:48px;height:1px;background:var(--glow)}
+.intel h2{margin:0;font-family:var(--body);font-weight:300;font-size:clamp(34px,min(4.6vw,8.2vh),74px);line-height:1.06;letter-spacing:-.01em;color:#e9edf3}
+.intel h2 .soft{color:#9dbcff}
+.intel h2 strong{display:block;font-weight:700}
+.intel h2 .grad{background:linear-gradient(90deg,#e3e9f4 0%,#7ea6ff 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.intel-copy p{margin:0;font-size:clamp(16px,1.25vw,20px);line-height:1.5;color:var(--steel);max-width:60ch}
+.btn.glow{margin-top:4px;padding:16px 30px;font-size:12px;box-shadow:0 0 24px rgba(59,140,255,.35),inset 0 0 14px rgba(59,140,255,.12)}
+.hero::after{content:"";position:absolute;inset:auto 0 0;height:clamp(60px,12vh,130px);background:linear-gradient(180deg,rgba(5,7,11,0),var(--space));pointer-events:none;z-index:1}
+.intel-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,4vw,72px)}
+.intel-steps li{position:relative;display:grid;gap:8px;align-content:start;padding:clamp(18px,2.6vh,26px) clamp(20px,2vw,30px);border:1px solid var(--line-strong);border-radius:18px;background:rgba(9,13,21,.62);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);min-width:0}
+.intel-steps li:not(:last-child)::after{content:"";position:absolute;top:50%;left:100%;width:clamp(28px,4vw,72px);height:1px;background:var(--line-strong)}
+.step-head{display:flex;align-items:center;gap:22px}
+.step-num{font-family:var(--body);font-weight:300;font-size:clamp(34px,3vw,46px);line-height:1;background:linear-gradient(180deg,#d2d9e3,#6f7a89);-webkit-background-clip:text;background-clip:text;color:transparent;font-variant-numeric:tabular-nums}
+.step-head svg{width:40px;height:40px;color:var(--glow)}
+.intel-steps h3{margin:8px 0 0;font-size:clamp(18px,1.5vw,22px);font-weight:500;line-height:1.3;color:#eef2f7}
+.intel-steps p{margin:0;color:var(--steel-dim);font-size:15px}
+.intel.arrive .intel-copy > *,.intel.arrive .intel-steps li{animation:rise-in .9s cubic-bezier(.2,.7,.2,1) both}
+.intel.arrive .intel-copy > :nth-child(2){animation-delay:.08s}
+.intel.arrive .intel-copy > :nth-child(3){animation-delay:.16s}
+.intel.arrive .intel-copy > :nth-child(4){animation-delay:.24s}
+.intel.arrive .intel-steps li:nth-child(1){animation-delay:.32s}
+.intel.arrive .intel-steps li:nth-child(2){animation-delay:.42s}
+.intel.arrive .intel-steps li:nth-child(3){animation-delay:.52s}
+@keyframes rise-in{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:none}}
+@media (max-height:700px) and (min-width:901px){
+  .intel{padding-top:84px}
+  .intel-inner{gap:22px}
+  .intel-steps li p{font-size:14px}
+}
+@media (max-width:900px){
+  .intel{align-items:flex-start}
+  .intel-steps{grid-template-columns:1fr;gap:14px}
+  .intel-steps li:not(:last-child)::after{display:none}
+  .intel{padding-top:calc(30svh + 40px)}
+  .eyebrow{font-size:10px;letter-spacing:.22em;gap:14px}
+  .eyebrow::before{width:32px}
+  .intel-bg{inset:0 0 auto 0;height:calc(46svh + 40px);-webkit-mask-image:linear-gradient(180deg,#000 50%,transparent 100%);mask-image:linear-gradient(180deg,#000 50%,transparent 100%)}
+  .intel-bg img{object-position:64% 42%;filter:brightness(1.25) saturate(1.1)}
+  .intel-bg::after{background:linear-gradient(180deg,rgba(5,7,11,.55) 0%,rgba(5,7,11,0) 22%,rgba(5,7,11,0) 45%,rgba(5,7,11,.75) 78%,var(--space) 100%)}
+}
+
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
 }
@@ -253,9 +306,43 @@ footer .brand span{font-size:12px}
       </div>
     </div>
 
-    <a class="scroll" href="#solutions" aria-label="Scroll to solutions">
+    <a class="scroll" href="#intelligence" aria-label="Scroll to market intelligence">
       <svg viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M1 1l10 10L21 1"/></svg>
     </a>
+  </section>
+
+  <section class="intel" id="intelligence" aria-labelledby="intel-title">
+    <div class="intel-bg" aria-hidden="true"><img src="assets/market-intel.webp" alt="" width="2800" height="1869" loading="lazy"></div>
+    <div class="wrap intel-inner">
+      <div class="intel-copy">
+        <p class="eyebrow">Tailored market intelligence</p>
+        <h2 id="intel-title">Turn Market Data <span class="soft">into</span> <strong>Real Business <span class="grad">Growth</span></strong></h2>
+        <p>Continuous market research, pricing and demand trends, turned into clear steps for your business. We track what moves your market to keep you ahead.</p>
+        <a class="btn glow" href="#contact">Define your scope
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 8h11M9 4l4 4-4 4"/></svg>
+        </a>
+      </div>
+      <ol class="intel-steps">
+        <li>
+          <div class="step-head"><span class="step-num">01</span>
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="20" cy="20" r="12"/><circle cx="20" cy="20" r="4.5"/><path d="M20 3v8M20 29v8M3 20h8M29 20h8"/></svg></div>
+          <h3>Define Your Scope</h3>
+          <p>Tell us what you need to track: pricing, demand or market movements.</p>
+        </li>
+        <li>
+          <div class="step-head"><span class="step-num">02</span>
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><ellipse cx="20" cy="9" rx="12" ry="4.5"/><path d="M8 9v22c0 2.5 5.4 4.5 12 4.5s12-2 12-4.5V9"/><path d="M8 16.5c0 2.5 5.4 4.5 12 4.5s12-2 12-4.5M8 24c0 2.5 5.4 4.5 12 4.5s12-2 12-4.5"/></svg></div>
+          <h3>Custom Data Collection &amp; Analysis</h3>
+          <p>We build the research around your goals and analyse the market signals.</p>
+        </li>
+        <li>
+          <div class="step-head"><span class="step-num">03</span>
+            <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><path d="M23 4L9 23h10l-2 13 14-19H21l2-13z"/></svg></div>
+          <h3>Direct Answers &amp; Action Steps</h3>
+          <p>You get clear answers to your exact questions, ready to guide your next move.</p>
+        </li>
+      </ol>
+    </div>
   </section>
 
   <section class="block" id="solutions" aria-labelledby="sol-title">
@@ -422,20 +509,41 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
 </script>
 
 <script>
-/* Intro snap: a small scroll on the hero glides to the content, and back. */
+/* Intro: a small scroll on the hero glides down to the market section, and back.
+   The hero text drifts up and fades as it leaves; the header gains a backdrop once scrolled. */
 (function () {
   var hero = document.querySelector('.hero');
-  var next = document.getElementById('solutions');
+  var next = document.getElementById('intelligence');
+  var core = document.querySelector('.hero-core');
+  var nav = document.querySelector('.nav');
   if (!hero || !next) return;
+  var root = document.documentElement;
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var busy = false, startY = null;
+  var busy = false, startY = null, arrived = false;
+
+  function ease(t) { return t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2; }
+  function arrive() {
+    if (reduce) return;
+    next.classList.remove('arrive'); void next.offsetWidth; next.classList.add('arrive'); arrived = true;
+  }
   function go(y) {
     busy = true;
-    window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' });
-    setTimeout(function () { busy = false; }, reduce ? 50 : 900);
+    if (y > window.scrollY) arrive();
+    if (reduce) { window.scrollTo(0, y); busy = false; return; }
+    var from = window.scrollY, dist = y - from, dur = 1100, t0 = null;
+    root.style.scrollBehavior = 'auto';
+    function step(ts) {
+      if (t0 === null) t0 = ts;
+      var t = Math.min((ts - t0) / dur, 1);
+      window.scrollTo(0, from + dist * ease(t));
+      if (t < 1) requestAnimationFrame(step);
+      else { root.style.scrollBehavior = ''; setTimeout(function () { busy = false; }, 120); }
+    }
+    requestAnimationFrame(step);
   }
   function wantDown(y) { return y < next.offsetTop - 4; }
   function wantUp(y) { return y > 0 && y <= next.offsetTop + 4; }
+
   window.addEventListener('wheel', function (e) {
     var y = window.scrollY;
     if (busy) { e.preventDefault(); return; }
@@ -456,6 +564,33 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     if ((k === 'ArrowDown' || k === 'PageDown' || k === ' ') && wantDown(y)) { e.preventDefault(); go(next.offsetTop); }
     else if ((k === 'ArrowUp' || k === 'PageUp') && wantUp(y)) { e.preventDefault(); go(0); }
   });
+  var arrow = document.querySelector('.scroll');
+  if (arrow) arrow.addEventListener('click', function (e) { e.preventDefault(); if (!busy) go(next.offsetTop); });
+
+  /* Play the entrance once if the section is reached some other way (links, scrollbar). */
+  if ('IntersectionObserver' in window) {
+    var startsVisible = next.getBoundingClientRect().top < window.innerHeight;
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) { if (!arrived && !startsVisible) arrive(); io.disconnect(); }
+      });
+    }, { threshold: 0.2 });
+    io.observe(next);
+  }
+
+  var ticking = false;
+  function onScroll() {
+    var y = window.scrollY;
+    if (nav) nav.classList.toggle('scrolled', y > 40);
+    if (core && !reduce) {
+      var p = Math.min(Math.max(y / hero.offsetHeight, 0), 1);
+      core.style.transform = p ? 'translateY(' + (-p * 90).toFixed(1) + 'px)' : '';
+      core.style.opacity = p ? String(Math.max(0, 1 - p * 1.15)) : '';
+    }
+    ticking = false;
+  }
+  window.addEventListener('scroll', function () { if (!ticking) { ticking = true; requestAnimationFrame(onScroll); } }, { passive: true });
+  onScroll();
 })();
 </script>
 
